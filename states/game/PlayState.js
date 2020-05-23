@@ -5,10 +5,16 @@ function PlayState(stateMachine)
     this.stateMachine = stateMachine
     this.player = new Player(
         {
-            x: 500, y:500, width: 64, height: 64, walkSpeed: gEntities["player"].walkSpeed, health: gEntities["player"].health,
+            x: 200, y:200, width: 64, height: 64, walkSpeed: gEntities["player"].walkSpeed, health: gEntities["player"].health,
             animations:  gEntities["player"].animations
         });
     this.dungeon = new Dungeon(this.player)
+
+    
+    Game.bindAction(Keys.A, () => this.player.move(Keys.LEFT))
+    Game.bindAction(Keys.W, () => this.player.move(Keys.UP))
+    Game.bindAction(Keys.D, () => this.player.move(Keys.RIGHT))
+    Game.bindAction(Keys.S, () => this.player.move(Keys.DOWN))
 }
 
 PlayState.prototype.update = function()
@@ -21,8 +27,8 @@ PlayState.prototype.update = function()
 PlayState.prototype.render = function()
 {
    this.dungeon.render()
-   
-   this.player.render(Game.ctx)
+
+   //this.player.render(Game.ctx)
 }
 
 Game.bindActionOnePress(Keys.SPACE, () => Game.playSound(gSounds["sword"]))

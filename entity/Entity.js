@@ -12,7 +12,7 @@ var Entity = (function()
             this.height = def.height;
             
             this.animations = createAnimations(def.animations);
-
+           
             this.walkSpeed = def.walkSpeed;
             this.health = def.health;
 
@@ -22,11 +22,10 @@ var Entity = (function()
             this.stateMachine.update();
 
             if (this.animations[this.currentAnimation])            
-            this.animations[this.currentAnimation].update();
+                this.animations[this.currentAnimation].update();
             
         }
-        render(ctx) {                        
-
+        render(ctx) {                      
             if (this.animations[this.currentAnimation])  
                 this.animations[this.currentAnimation].render(ctx, this.x, this.y);
         }

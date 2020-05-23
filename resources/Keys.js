@@ -21,7 +21,7 @@ const Keys = {
     "UP": 38,
     "RIGHT": 39,
     "DOWN": 40,
-    "PRINTSCREEN": 44,
+    "PRINT_SCREEN": 44,
     "INSERT": 45,
     "DELETE": 46,
     "0": 48,

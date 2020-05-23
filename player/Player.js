@@ -4,9 +4,15 @@ var Player = (function()
         constructor(def) {
             super(def)           
         }
-        update() {
+        update() {            
             this.currentAnimation = Util.parseDirection(this.direction) + " - " + "Idle"
             super.update()            
+        }
+        move(direction)
+        {
+            this.direction = direction
+            console.log(this.currentAnimation)
+            console.log(direction, this.direction)
         }
     }
 

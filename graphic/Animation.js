@@ -50,12 +50,15 @@ var Animation = (function()
         {           
             if(frameName.includes(animationName)) 
             {                
+                var spriteSourceSize = gAnimationData[entityName].frames[frameName].spriteSourceSize
                 var frame = gAnimationData[entityName].frames[frameName].frame
                 var sourceSize = gAnimationData[entityName].frames[frameName].sourceSize
 
                 var frameData = {
-                    x: frame.x,
-                    y: frame.y,
+                    x: spriteSourceSize.x,
+                    y: spriteSourceSize.y,
+                    dx: frame.x,
+                    dy: frame.y,
                     frameWidth: frame.w,
                     frameHeight: frame.h,
                     width: sourceSize.w,

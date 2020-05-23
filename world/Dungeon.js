@@ -7,13 +7,13 @@ var Dungeon = (function()
         this.player = player
         
         this.dungeon = [ 
-            new Room(Random.next(15, 20),  Random.next(8,14)),
-            new Room(Random.next(15, 20),  Random.next(8,14)),
-            new Room(Random.next(15, 20),  Random.next(8,14)),
-            new Room(Random.next(15, 20),  Random.next(8,14)),
-            new Room(Random.next(15, 20),  Random.next(8,14)),
-            new Room(Random.next(15, 20),  Random.next(8,14)),
-            new Room(Random.next(15, 20),  Random.next(8,14))  
+            new Room(Random.next(15, 20),  Random.next(8,14), this.player),
+            new Room(Random.next(15, 20),  Random.next(8,14), this.player),
+            new Room(Random.next(15, 20),  Random.next(8,14), this.player),
+            new Room(Random.next(15, 20),  Random.next(8,14), this.player),
+            new Room(Random.next(15, 20),  Random.next(8,14), this.player),
+            new Room(Random.next(15, 20),  Random.next(8,14), this.player),
+            new Room(Random.next(15, 20),  Random.next(8,14), this.player)  
         ]
         
         this.shifting = false

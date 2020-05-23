@@ -1,18 +1,21 @@
 var Room = (function() 
 {
-    var _mapData, _atlas, _map
+    var  _atlas
 
     class Room {
-        constructor(width, height) {
-            _mapData = new RoomGenerator(width, height);
-            _atlas = new Atlas(gTextures[_mapData.tileSet], 64, 64);
-            _map = new Map(_atlas, _mapData);
-            this.camera = new Camera({ x: 0, y: 0 }, [_map]);
+        constructor(width, height, player) {
+            this.player = player
+            this.mapData = new RoomGenerator(width, height)
+            _atlas = new Atlas(gTextures[this.mapData.tileSet], 64, 64)
+            this.map = new Map(_atlas, this.mapData)
+            this.map.objects.push(this.player)          
+            this.camera = new Camera({ x: 0, y: 0 }, [this.map])
         }
         update() {
+            this.map.update()
         }
         render() {
-            this.camera.render(Game.ctx);
+            this.camera.render(Game.ctx)
         }
     }
     return Room
