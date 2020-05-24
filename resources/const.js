@@ -1,9 +1,0 @@
-const
-    VIRTUAL_WIDTH = 800,
-    VIRTUAL_HEIGHT = 600,
-    CANVAS_WIDTH = 1280,
-    CANVAS_HEIGHT = 960,
-    LEFT = 37,
-    UP = 38,
-    RIGHT = 39,
-    DOWN = 40

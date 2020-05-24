@@ -1,0 +1,55 @@
+{
+    "walkSpeed": 10,
+    "health": 6,
+    "animations": 
+    [       
+        {    
+            "entityName": "warrior-sprite",
+            "animationName":  "Right - Idle/",
+            "interval": 10,
+            "looping": true
+        },        
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Left - Idle/",
+            "interval": 10,
+            "looping": true
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Front - Idle/",
+            "interval": 10,
+            "looping": true
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Back - Idle/",
+            "interval": 10,
+            "looping": true
+        },
+        {    
+            "entityName": "warrior-sprite",
+            "animationName":  "Right - Walking/",
+            "interval": 10,
+            "looping": true
+        },        
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Left - Walking/",
+            "interval": 10,
+            "looping": true
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Front - Walking/",
+            "interval": 10,
+            "looping": true
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Back - Walking/",
+            "interval": 10,
+            "looping": true
+        }
+    ]
+}

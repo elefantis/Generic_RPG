@@ -1,0 +1,7 @@
+{
+    "music":"sounds/Classic Dynamic Track (looped).wav",
+    "sword":"sounds/Sword_1.mp3",
+    "hit-enemy":"sounds/Impact_7.mp3",
+    "hit-player":"sounds/Cut_Flesh 3.mp3",
+    "door":"sounds/Door_Open.mp3"
+}

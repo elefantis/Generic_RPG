@@ -1,0 +1,7 @@
+{
+    "Textures": "data/textures.json",
+    "Sounds": "data/sounds.json",
+    "MapData": "data/mapTiles.json",
+    "AnimationsData": ["data/warrior-sprite.json", "data/warrior-sprite2.json"],
+    "Entities": [ "data/player.json" ]
+}

@@ -1,0 +1,5 @@
+{
+    "tiles":"graphics/Dungeon@64x64.png",
+    "warrior-sprite": "graphics/warrior.png",
+    "warrior-sprite2": "graphics/warrior2.png"
+}
