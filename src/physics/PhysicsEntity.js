@@ -35,6 +35,8 @@ class PhysicsEntity{
         return this.#object.ay || 0
     }
     set vx(value) {
+        //console.log(value, this.#object.vx)
+        
          this.#object.vx = value
     }
     set vy(value) {

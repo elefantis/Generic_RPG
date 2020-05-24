@@ -10,7 +10,9 @@ var Player = (function()
         }
         move(direction)
         {
-            this.direction = direction           
+            this.direction = direction
+            this.vx = Util.directionToVector(direction).x  * this.walkSpeed         
+            this.vy = Util.directionToVector(direction).y  * this.walkSpeed       
         }
     }
 

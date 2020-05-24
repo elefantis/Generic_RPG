@@ -24,7 +24,7 @@ var Dungeon = (function()
         _index = Random.next(0, this.dungeon.length)        
         this.currentRoom = this.dungeon[_index]
 
-        Game.bindAction(Keys.LEFT, () => { this.shiftRoom.bind(this)(Keys.LEFT); this.player.vx = 8; console.log(this.player.vx)})
+        Game.bindAction(Keys.LEFT, () => { this.shiftRoom.bind(this)(Keys.LEFT)})
         Game.bindAction(Keys.UP, () => { this.shiftRoom.bind(this)(Keys.UP) })
         Game.bindAction(Keys.RIGHT, () => { this.shiftRoom.bind(this)(Keys.RIGHT) })
         Game.bindAction(Keys.DOWN, () => { this.shiftRoom.bind(this)(Keys.DOWN) })
