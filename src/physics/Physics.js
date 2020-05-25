@@ -19,7 +19,7 @@ class Physics {
 
             entity.vx = 0
             entity.vy = 0
-            entity.ay = 0
+            entity.ax = 0
             entity.ay = 0
         }
     }

@@ -20,15 +20,11 @@ function PlayState(stateMachine)
 PlayState.prototype.update = function()
 {
     this.dungeon.update()
-    
-    this.player.update()
 }
 
 PlayState.prototype.render = function()
 {
    this.dungeon.render()
-
-   //this.player.render(Game.ctx)
 }
 
 Game.bindActionOnePress(Keys.Z, () => Game.playSound(gSounds["sword"]))

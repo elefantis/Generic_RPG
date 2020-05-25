@@ -34,9 +34,10 @@ var Map = (function()
                 generateCanvasMap(this, layer)        
         }
 
-        update() {
-            for(var gameObject of this.objects)
+        update() {          
+            for(var gameObject of this.objects) {
                 gameObject.update()
+            }
         }
 
         draw(ctx, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) {

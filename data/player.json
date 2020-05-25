@@ -30,25 +30,25 @@
         {    
             "entityName": "warrior-sprite",
             "animationName":  "Right - Walking/",
-            "interval": 10,
+            "interval": 2,
             "looping": true
         },        
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Left - Walking/",
-            "interval": 10,
+            "interval": 2,
             "looping": true
         },
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Front - Walking/",
-            "interval": 10,
+            "interval": 1,
             "looping": true
         },
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Back - Walking/",
-            "interval": 10,
+            "interval": 1,
             "looping": true
         }
     ]
