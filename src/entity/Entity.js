@@ -18,8 +18,8 @@ var Entity = (function()
 
             this.dead = false;
         }
-        update() {
-            this.stateMachine.update();
+        update(params) {
+            this.stateMachine.update(params);
 
             if (this.animations[this.currentAnimation])            
                 this.animations[this.currentAnimation].update();            

@@ -15,11 +15,11 @@ class StateMachine {
             throw Messages.StateDoesNotExists;
 
         this.current.exit();
-        this.current = new this.states[stateName](this);
+        this.current = new this.states[stateName](this);        
         this.current.enter(params);
     }
-    update() {
-        this.current.update();
+    update(params) {
+        this.current.update(params);
     }
     render() {
         this.current.render();

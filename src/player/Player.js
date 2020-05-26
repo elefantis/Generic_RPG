@@ -5,18 +5,16 @@ var Player = (function()
             super(def)
             this.nextVx = 0
             this.nextVy = 0
-            this.nextDirection = this.direction                  
-        }
-        update() {
-            this.vx = this.nextVx * this.walkSpeed
-            this.vy = this.nextVy * this.walkSpeed
-            this.direction = this.nextDirection  
-            this.nextVx = 0
-            this.nextVy = 0
+            this.nextDirection = this.direction           
 
-            this.isMoving = this.vx != 0 || this.vy != 0               
-            this.currentAnimation = Util.parseDirection(this.direction) + " - " + (this.isMoving == true ? "Walking" : "Idle")                           
-            super.update()                       
+            this.stateMachine = new StateMachine({
+                "idleMove": PlayerMoveIdleState
+            });
+
+            this.stateMachine.change("idleMove")              
+        }
+        update() {                                       
+            super.update(this)                    
         }
         move(direction)
         {
@@ -27,6 +25,7 @@ var Player = (function()
             if(this.nextDirection == Keys.UP || this.nextDirection == Keys.DOWN)
                 this.nextVy = Util.directionToVector(direction).y     
         }
+
     }
 
     return Player
