@@ -50,6 +50,30 @@
             "animationName": "Back - Walking/",
             "interval": 1,
             "looping": true
+        },
+        {    
+            "entityName": "warrior-sprite",
+            "animationName":  "Right - Slashing/",
+            "interval": 2,
+            "looping": true
+        },        
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Left - Slashing/",
+            "interval": 2,
+            "looping": true
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Front - Slashing/",
+            "interval": 2,
+            "looping": true
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Back - Slashing/",
+            "interval": 2,
+            "looping": true
         }
     ]
 }

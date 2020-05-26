@@ -4,7 +4,7 @@ Game.load = function()
     Game.setTitle("Generic RPG")
 
      this.gStateMachine = new StateMachine({
-        "load":  LoadState,
+        "load": LoadState,
         "play": PlayState
     });
 
