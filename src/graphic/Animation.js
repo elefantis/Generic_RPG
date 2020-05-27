@@ -1,7 +1,5 @@
 var Animation = (function()
 {
-    const START_FRAME = 0
-
     class Animation {
         constructor(def) {           
             this.frames = getFrameList(def.entityName, def.animationName);
@@ -9,18 +7,22 @@ var Animation = (function()
             this.looping = def.looping;
 
             this.timer = 0;
-            this.currentFrame = START_FRAME;
+            this.currentFrame = 0;
 
             this.timesPlayed = 0;
+            this.onFinished = false
         }
         refresh() {
             this.timer = 0;
-            this.currentFrame = START_FRAME;
+            this.currentFrame = 0;
             this.timesPlayed = 0;
+            this.onFinished = false
         }
         update() {
-            if (!this.looping && this.timesPlayed > 0)
+            if (!this.looping && this.timesPlayed > 0) {
+                this.onFinished = true
                 return;
+            }
 
             if (this.frames.length > 1) {
                 this.timer++;
@@ -30,7 +32,7 @@ var Animation = (function()
 
                     this.currentFrame = (this.currentFrame + 1) % (this.frames.length);
 
-                    if (this.currentFrame == START_FRAME)
+                    if (this.currentFrame == this.frames.length - 1)
                         this.timesPlayed++;
                 }
             }

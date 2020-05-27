@@ -15,6 +15,7 @@ function PlayState(stateMachine)
     Game.bindAction(Keys.W, () => this.player.move(Keys.UP))
     Game.bindAction(Keys.D, () => this.player.move(Keys.RIGHT))
     Game.bindAction(Keys.S, () => this.player.move(Keys.DOWN))
+    Game.bindAction(Keys.Z, () => this.player.attack(Keys.DOWN))
 }
 
 PlayState.prototype.update = function()
@@ -27,7 +28,6 @@ PlayState.prototype.render = function()
    this.dungeon.render()
 }
 
-Game.bindActionOnePress(Keys.Z, () => Game.playSound(gSounds["sword"]))
 Game.bindActionOnePress(Keys.M, () => Game.mute())
 Game.bindActionOnePress(Keys.P, () => Game.playSound(gSounds["music"], true))
 Game.bindActionOnePress(Keys.F, () => Game.ToggleFullScreen())

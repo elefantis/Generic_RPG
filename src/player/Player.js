@@ -5,18 +5,23 @@ var Player = (function()
             super(def)
             this.nextVx = 0
             this.nextVy = 0
-            this.nextDirection = this.direction           
+            this.nextDirection = this.direction
+            this.slashing = false
+                         
 
             this.stateMachine = new StateMachine({
-                "idleMove": PlayerMoveIdleState
-            });
-
-            this.stateMachine.change("idleMove")              
+                "idleMove": PlayerMoveIdleState,
+                "slash": PlayerSlashingState
+            });        
+            this.stateMachine.change("idleMove")   
         }
-        update() {                                       
+        update() {            
+            if(this.slashing == true && this.stateMachine.currentStateName == "idleMove")
+                this.stateMachine.change("slash")
+               
             super.update(this)                    
         }
-        move(direction)
+        move = function(direction)
         {
             this.nextDirection = direction
             if(this.nextDirection == Keys.RIGHT || this.nextDirection == Keys.LEFT)
@@ -24,6 +29,9 @@ var Player = (function()
             
             if(this.nextDirection == Keys.UP || this.nextDirection == Keys.DOWN)
                 this.nextVy = Util.directionToVector(direction).y     
+        }
+        attack = function() {
+            this.slashing = true
         }
 
     }

@@ -9,6 +9,7 @@ class StateMachine {
         };
         this.states = states;
         this.current = this.empty;
+        this.currentStateName = ""
     }
     change(stateName, params) {
         if (!this.states.hasOwnProperty(stateName))
@@ -16,6 +17,7 @@ class StateMachine {
 
         this.current.exit();
         this.current = new this.states[stateName](this);        
+        this.currentStateName = stateName
         this.current.enter(params);
     }
     update(params) {

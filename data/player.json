@@ -55,25 +55,49 @@
             "entityName": "warrior-sprite",
             "animationName":  "Right - Slashing/",
             "interval": 2,
-            "looping": true
+            "looping": false
         },        
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Left - Slashing/",
             "interval": 2,
-            "looping": true
+            "looping": false
         },
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Front - Slashing/",
             "interval": 2,
-            "looping": true
+            "looping": false
         },
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Back - Slashing/",
             "interval": 2,
-            "looping": true
+            "looping": false
+        },
+        {    
+            "entityName": "warrior-sprite",
+            "animationName":  "Right - Hurt/",
+            "interval": 2,
+            "looping": false
+        },        
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Left - Hurt/",
+            "interval": 2,
+            "looping": false
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Front - Hurt/",
+            "interval": 2,
+            "looping": false
+        },
+        {       
+            "entityName": "warrior-sprite",    
+            "animationName": "Back - Hurt/",
+            "interval": 2,
+            "looping": false
         }
     ]
 }

@@ -1,6 +1,6 @@
 class PlayerMoveIdleState extends BaseState{
     constructor() {
-        super()
+        super()        
     }
     update = function(player) {
         player.vx = player.nextVx * player.walkSpeed
