@@ -54,25 +54,25 @@
         {    
             "entityName": "warrior-sprite",
             "animationName":  "Right - Slashing/",
-            "interval": 2,
+            "interval": 1,
             "looping": false
         },        
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Left - Slashing/",
-            "interval": 2,
+            "interval": 1,
             "looping": false
         },
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Front - Slashing/",
-            "interval": 2,
+            "interval": 1,
             "looping": false
         },
         {       
             "entityName": "warrior-sprite",    
             "animationName": "Back - Slashing/",
-            "interval": 2,
+            "interval": 1,
             "looping": false
         },
         {    

@@ -68,7 +68,6 @@ Game.startGame = function()
     this.gainNode = ctx.createGain()
     this.gainNode.connect(ctx.destination)
 
-
     this.load()
 
     var gameLoop = function(dt)
